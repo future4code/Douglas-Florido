@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(76, 141, 76, 0.527);
+}
+
+#imagem_portfolio{
+
+   width: 250px;
+   border-radius: 100px;
+   display: inline-block;
+    
+}
+
+.cabecalho{
+    display: inline;
+    border: 2px solid salmon;
+    margin: 5px 0px;
+    padding: 5px;
+
+
+}
+
+.caixa{
+    border: 2px solid;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    display: inline-block;
+}
+
+.caixa caixa_desenvolvedor {
+    
+}
+
+.caixa caixa_engenharia{
+    border: 2px solid hotpink;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    display: inline-block;
+}
+
