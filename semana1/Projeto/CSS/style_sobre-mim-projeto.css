@@ -73,22 +73,17 @@ h1{
     
 }
 
-#titulo_projetos{
-    font-size: 60px;
-    margin: 0 25%;
+img{
+    display: block;
+    width: 50%;
 }
 
-.projetos{
-    display: inline-block;
-    text-decoration: none;
-    color:white;
-    background-color: grey;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;     
-}
+#descricao{
 
-.posicionamento_projetos{
-    margin: 0 24.6%;
+    background-color: rgba(128, 128, 128, 0.63);
+    width: 500px;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px 270px; 
+    text-align: justify;
 }
-

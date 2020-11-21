@@ -73,22 +73,41 @@ h1{
     
 }
 
-#titulo_projetos{
-    font-size: 60px;
-    margin: 0 25%;
+#titulo_contato{
+    font-size: 40px;
+    display: block;
 }
 
-.projetos{
+#caixa_contato{ 
     display: inline-block;
-    text-decoration: none;
-    color:white;
     background-color: grey;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;     
+    border: 2px solid black;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    margin: 10px 310px;
 }
 
-.posicionamento_projetos{
-    margin: 0 24.6%;
+#nome{
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
 
+#email{    
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+#assunto_caixa{
+    width: 83%;
+}
+
+#descricao_caixa{
+    float: none;
+    width: 100%;
+    height: 200px;  
+    text-align: left;
+    text-emphasis: top;
+}

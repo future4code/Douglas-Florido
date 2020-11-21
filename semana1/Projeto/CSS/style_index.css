@@ -1,43 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 body{
     font-family: 'Montserrat', sans-serif;
-    background-color: rgba(76, 141, 76, 0.527);
+    background-color: #4d8f4d86;
 }
 
 #imagem_portfolio{
 
    width: 250px;
    border-radius: 100px;
-   display: inline-block;
+   display: inline;
+   /* z-index: -1; */
+    
+}
+
+h1{
+    display: inline-block;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 50px;    
+}
+
+
+#posicionamento{
+    display: inline-block;    
+    margin: -500px 150px 150px 150px;
     
 }
 
 .cabecalho{
+    display: inline;      
+    margin: -5px;
+    position: center;    
+    /* z-index: +1; */
+}
+
+#pagina_inicial{
+    text-decoration: none;
     display: inline;
-    border: 2px solid salmon;
-    margin: 5px 0px;
-    padding: 5px;
-
-
+    padding: 10px;    
+    border-left: 5px groove;
+    border-top: 5px groove;
+    border-bottom: 5px groove;
 }
 
-.caixa{
-    border: 2px solid;
-    padding: 20px;
-    margin: 20px;
-    width: 300px;
-    display: inline-block;
+#sobre-mim{
+    text-decoration: none;
+    display: inline;
+    padding: 10px;   
+    border-left: 3px groove;
+    border-right: 3px groove;
+    border-top: 5px groove;
+    border-bottom: 5px groove;
 }
 
-.caixa caixa_desenvolvedor {
+#projetos{
+    text-decoration: none;
+    display: inline;
+    padding: 10px;        
+    /* border-right: 3px groove; */
+    border-top: 5px groove;
+    border-bottom: 5px groove;
+}
+
+#contato{
+    text-decoration: none;
+    display: inline;
+    padding: 10px;        
+    border-left: 3px groove;
+    border-right: 5px groove;
+    border-top: 5px groove;
+    border-bottom: 5px groove;
     
 }
 
-.caixa caixa_engenharia{
-    border: 2px solid hotpink;
+.caixa{
     padding: 20px;
-    margin: 20px;
+    margin: -10px 200px;
     width: 300px;
-    display: inline-block;
+    display: inline-block;    
+}
+
+.caixa .caixa_desenvolvedor {
+    border-radius: 50px;
+    border: 5px outset;
+    padding: 10px;
+    background: rgba(124, 124, 255, 0.815);   
+    text-align: center;
+}
+
+
+
+.caixa .caixa_engenharia{
+    border-radius: 50px;
+    border: 5px outset;
+    padding: 10px;
+    background: rgba(47, 122, 47, 0.781);
+    text-align: center;
+}
+
+li{
+   text-align: left; 
 }
 

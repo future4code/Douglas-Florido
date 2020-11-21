@@ -73,22 +73,32 @@ h1{
     
 }
 
-#titulo_projetos{
-    font-size: 60px;
-    margin: 0 25%;
+#descricao{
+
+    background-color: rgba(128, 128, 128, 0.63);
+    width: 500px;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px 270px; 
+    text-align: justify;
 }
 
-.projetos{
+ul{
+    font-size: 40px;
+    font-style: inherit;
+}
+
+li{
+    font-size: 30px;
+}
+
+#caixa{
+    background:rgba(124, 0, 0, 0.616);
+    position: center;
     display: inline-block;
-    text-decoration: none;
-    color:white;
-    background-color: grey;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;     
-}
+    width: 500px;    
+    padding: 20px;
+    margin: 50px;
+    border-radius: 10px;
 
-.posicionamento_projetos{
-    margin: 0 24.6%;
 }
-
