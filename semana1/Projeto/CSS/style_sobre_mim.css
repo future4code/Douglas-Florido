@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #4d8f4d86;
+}
+
+#imagem_portfolio{
+
+   width: 250px;
+   border-radius: 100px;
+   display: inline;
+   /* z-index: -1; */
+    
+}
+
+h1{
+    display: inline-block;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 50px;    
+}
+
+
+#posicionamento{
+    display: inline-block;    
+    margin: -500px 150px 150px 150px;
+    
+}
+
+.cabecalho{
+    display: inline;      
+    margin: -5px;
+    position: center;    
+    /* z-index: +1; */
+}
+
+#pagina_inicial{
+    text-decoration: none;
+    display: inline;
+    padding: 10px;    
+    border-left: 5px groove;
+    border-top: 5px groove;
+    border-bottom: 5px groove;
+}
+
+#sobre-mim{
+    text-decoration: none;
+    display: inline;
+    padding: 10px;   
+    border-left: 3px groove;
+    border-right: 3px groove;
+    border-top: 5px groove;
+    border-bottom: 5px groove;
+}
+
+#projetos{
+    text-decoration: none;
+    display: inline;
+    padding: 10px;        
+    /* border-right: 3px groove; */
+    border-top: 5px groove;
+    border-bottom: 5px groove;
+}
+
+#contato{
+    text-decoration: none;
+    display: inline;
+    padding: 10px;        
+    border-left: 3px groove;
+    border-right: 5px groove;
+    border-top: 5px groove;
+    border-bottom: 5px groove;
+    
+}
+
+#descricao{
+
+    background-color: rgba(128, 128, 128, 0.63);
+    width: 500px;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px 270px; 
+    text-align: justify;
+}
+
+ul{
+    font-size: 40px;
+    font-style: inherit;
+}
+
+li{
+    font-size: 30px;
+}
+
+#caixa{
+    background:rgba(124, 0, 0, 0.616);
+    position: center;
+    display: inline-block;
+    width: 500px;    
+    padding: 20px;
+    margin: 50px;
+    border-radius: 10px;
+
+}

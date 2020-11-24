@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;  
+}
+
+body{
+    background-color: rgba(224, 224, 103, 0.726);
+}
+
+#Titulo_nao-index{
+    font-size: 60px;
+    text-align: center;
+    background-color: rgba(255, 255, 0, 0.493);
+    border: 10px Solid black;
+    margin-bottom: 40px;
+                     
+}
+
+.botao_transicao{
+    color: black;
+    background-color: rgba(255, 255, 0, 0.493);
+    display: inline-block;
+    padding: 20px;
+    border: 5px solid black; 
+    border-radius: 20px;
+    margin-bottom: 20px;          
+}
+
+h2{
+    /* text-align: center; */
+    font-size: 30px;
+}
+
+li{
+    /* text-align: center; */
+    font-size: 25px;
+}
+
+#rodape{    
+    background-color: rgba(0, 0, 0, 1);
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    padding: 50px;
+}
