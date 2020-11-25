@@ -106,7 +106,7 @@ div {
 
     #container-colorido{    
         grid-template-columns: 50% 50%;
-        grid-template-rows: repeat(1fr, 6);
+        grid-template-rows: repeat(1fr, 20);
     
     }
 
