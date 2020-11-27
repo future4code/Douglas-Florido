@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: rgb(87, 161, 87);
+}
+
+#titulo_header{
+    font-family: 'Nerko One', cursive;
+    margin: 0.5vh 1vw;
+    font-size: 5vw;
+}
+
+#busca_header{
+    margin: 0.5vh 1vw;
+    width: 80vw;
+    height: 3vh;
+}
+
+footer{
+    height: 5vw;
+    width:100vw;
+    background-color: rgb(87, 161, 87);
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-around;    
+    align-content: space-around;
+    justify-items: space-around;
+    justify-content: space-around;
+    height: 76.7vh;
+}
+
+img{
+    height: 15vh;
+    width: 15vw; 
+
+}
+
+.video{
+    border: 1px solid black;   
+}
