@@ -1,0 +1,17 @@
+Exercicio 1
+O Exercicio pega um numero digitado pelo Usuario e verifica se é par ou
+ímpar, se for par ele envia a mensagem "Passou no teste" senao for
+"não passou no teste"
+
+Exercicio 2
+a) O Código serve para mostrar o preço da Fruta Selecionada
+b) a Mensagem enviada será "O preço da Fruta Maça é R$ 2.25
+c) ele faria o preço se tornar 5 e nao 5.5, pq o que separa 1 caso do outro é o Break *****************
+
+Exercicio 3
+a) a Primeira linha está criando uma variável chamada "numero" do tipo "const" que será igual ao inserido pelo usuário e transformado em Number (numero)
+b) se fosse 10: apareceria duas mensagens: "esse número passou no teste" e "essa mensagem é secreta!!!"
+se fosse -10: nao apareceria nenhuma mensagem
+c)como a mensagem é definida dentro do if, ou seja, dentro do escopo do if, ela nao seria definida e retornaria um erro
+
+Exercicio 4
