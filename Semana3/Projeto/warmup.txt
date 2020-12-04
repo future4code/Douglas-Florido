@@ -1,0 +1,12 @@
+let anos, mes, dia
+let idadeemdias
+anos = Number(prompt("Indique quantos anos voce tem"))
+mes = Number(prompt("Indique quantos meses faz que voce fez aniversario"))
+dia = Number(prompt("Indique quantos dias faz que voce fez aniversario"))
+
+mes = mes * 30
+anos = anos * 365
+
+idadeemdias = mes+anos+dia
+
+console.log(idadeemdias)
