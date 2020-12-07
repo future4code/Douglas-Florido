@@ -1,8 +1,13 @@
-const arrayoriginal = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
-let i=0
-for(num of arrayoriginal){
-    
-    console.log(arrayoriginal[i])
+let imprimiFuncao = (parametros) => {
+    console.log(parametros)
+    }
+   
+let somaDois = (num1, num2) => {
+    let  resultado
+    resultado = num1+num2
+    imprimiFuncao(resultado)
 
-    i++
 }
+
+let num1 = 2, num2 = 3
+somaDois(num1,num2)
