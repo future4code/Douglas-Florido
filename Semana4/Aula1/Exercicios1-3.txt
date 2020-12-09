@@ -1,0 +1,18 @@
+Exercicio 1
+a) será impresso:
+10
+50
+b) ela retornaria o valor, porém nao mostraria nada, ja q nao imprimimos nada no console.
+
+Exercicio 2
+a) será impresso:
+Darvas
+Caio
+
+b) será impresso:
+Amanda
+Caio
+
+Exercicio 3
+Ela recebe um Vetor, verifica se o valor na posição é par e coloca seu quadrado
+Seria melhor colocar um nome mnemonico, como "ElevarAoQuadrado"
