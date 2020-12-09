@@ -1,0 +1,26 @@
+Exercicio 1 
+O algoritmo está somando o valor de i dentro do laço
+será o valor de 4! que é 
+1+2+3+4= 10
+ou seja o console msotrara "10"
+
+Exercicio 2
+a)Será impresso todos os valores do vetor maiores que 18
+no caso será impresso:
+19
+21
+23
+25
+27
+30
+
+b) seria suficiente, porém teriamos que utilizar alguma variavel, como i, para identificar o indice
+colocando i=0 e incrementando em cada looping.
+
+Desafio
+
+seria impresso
+0
+00
+000
+0000
