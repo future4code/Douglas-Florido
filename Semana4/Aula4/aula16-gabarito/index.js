@@ -28,20 +28,32 @@ function imprimirExtrato(){
 
     // AQUI VEM A IMPLEMENTAÇÃO
 
-
-    const gasto = arrDespesas.map((gasto)=>{
-        return gasto.valor
+    let gasto = arrDespesas.forEach((gasto) =>{
+        if(gasto.tipo === "alimentação"){
+            gastoAlimentacao+=gasto.valor
+        }
+        else if(gasto.tipo === "utilidades"){
+            gastoUtilidades +=gasto.valor
+        }
+        else if(gasto.tipo === "viagem"){
+            gastoViagem +=gasto.valor
+        }
+        gastoTotal += gasto.valor
     })
-    let i=0
 
-    for(i of gasto){
-        gastoTotal+=i
-    }
+    // const gasto = arrDespesas.map((gasto)=>{
+    //     return gasto.valor
+    // })
+    // let i=0
+
+    // for(i of gasto){
+    //     gastoTotal+=i
+    // }
 
 
-    let alimentacao = arrDespesas.filter((valor)=>{
-        return valor.tipo === "Alimentação"
-    })
+    // let alimentacao = arrDespesas.filter((valor)=>{
+    //     return valor.tipo === "alimentação"
+    // })
     
     
 
