@@ -1,0 +1,9 @@
+let valor = Number(prompt("Insira um Valor"))
+
+if(valor>10){
+console.log("é maior que 10")
+}
+
+else{
+console.log("Não é maior que 10")
+}
