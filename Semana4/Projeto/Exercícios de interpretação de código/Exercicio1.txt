@@ -1,0 +1,7 @@
+a Função "ConversorDeMoeda"
+Recebe uma variavel chamada "valorEmDolar"
+pega outra variavel através do prompt chamada "cotacao"
+e devolve "R$"+valorEmDolar*Cotacao
+Ou seja, devolve uma String com o valor da moeda em dolar, de acordo com a cotação
+Por fim ele efetua a função com o valor 100
+e imprime na tela

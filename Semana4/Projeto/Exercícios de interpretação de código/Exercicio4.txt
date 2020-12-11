@@ -1,0 +1,9 @@
+o for percorre o vetor todo
+a variavel numero1 adquire o menor valor do vetor
+já a variavel numero 2 pega o maior valor,
+a primeira é dada com valor infinito para ser maior q qualquer valor do vetor e pegar o primeiro valor do vetor
+já a segunda como zero, para ser a menor, pegando o primeiro valor do vetor
+
+imprime:
+-10
+1590
