@@ -1,0 +1,1 @@
+1. Tudo em Javascript é um objeto, objeto é um conjunto de informações, logo função é um objeto, array também é considerado um objeto. é o mais Abrangente que se consegue chegar em Javascript é o objeto, no sentido de variavel
