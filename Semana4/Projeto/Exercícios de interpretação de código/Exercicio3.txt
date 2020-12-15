@@ -1,0 +1,8 @@
+entra em um For que percorre o vetor inteiro
+se for par joga o valor para o array1
+senao joga para o array2
+
+imprime
+Quantidade total de números 14
+6
+8

@@ -110,10 +110,39 @@ function filtrarDespesas(){
     let valorMin = Number(document.getElementById('valorFiltroMin').value)
     let valorMax = Number(document.getElementById('valorFiltroMax').value)
 
+    console.log(arrDespesas)
 
     let despesasFiltradas // AQUI NESSA VARIÁVEL VEM A IMPLEMENTAÇÃO
 
-    imprimirDespesas(despesasFiltradas)
+    let divDespesas = document.getElementById('despesas')
+    divDespesas.innerHTML = '<p><u>Despesas Detalhadas</u></p>'
+
+    if(tipoFiltro === "todos"){
+        arrDespesas.forEach(elemento => {
+            
+            
+            if(elemento.valor>=valorMin && elemento.valor<=valorMax){
+                divDespesas.innerHTML += `<div><u>Valor: R$${elemento.valor} | Tipo: ${elemento.tipo} | Descrição: ${elemento.descricao}</u></div>`
+                console.log(elemento)
+            }
+            
+            
+        });               
+    }
+    else if(tipoFiltro === "alimentação"){
+        // console.log("entrei alimentação")
+
+    }
+    else if(tipoFiltro === "utilidades"){
+        // console.log("entrei utilidades")
+
+    }
+    else if(tipoFiltro === "viagem"){
+        // console.log("entrei viagem")
+
+    }
+
+    // imprimirDespesas(despesasFiltradas)
 }
 
 

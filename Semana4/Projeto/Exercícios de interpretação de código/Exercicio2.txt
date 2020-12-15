@@ -1,0 +1,18 @@
+Função que recebe uma String com o tipo de investimento e o valor investido
+entra em um switch case,
+se tipoDeInvestimento for igual a Poupança
+valor retornado será valor*1.03
+se tipoDeInvestimento for igual a Renda Fixa
+valor retornado será valor*1.05
+se tipoDeInvestimento for igual a CDB
+valor retornado será valor*1.06
+se tipoDeInvestimento for igual a Ações
+valor retornado será valor*1.01
+se tipoDeInvestimento nao for igual a nenhum
+valor retornado será o que estiver em tipoDeInvestimento
+
+e dois Exemplos são jogados na função
+imprimindo, respectivamente
+165
+Tipo de Investimento Incorreto!
+Tesouro Direto 200
