@@ -1,0 +1,12 @@
+let qtde
+let valor=0
+
+if(qtde>=12){
+valor=qtde
+}
+
+else{
+valor=qtde*1.3
+}
+
+console.log(valor)
