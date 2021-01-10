@@ -1,0 +1,8 @@
+Os Componentes semelhantes desse projeto seriam:
+a Caixa de Valor, Valor Minimo e Valor máximo
+
+Os Titulos: COntrolador de Despesa, Despesas Detalhadas e Extrato
+
+Os Subtitulos: Cadastrar Despesa e Valor Total
+
+e por fim todas as Labels.
