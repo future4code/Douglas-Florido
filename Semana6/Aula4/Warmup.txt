@@ -1,0 +1,8 @@
+anoAtual: 2021;
+anoNascimento: x;
+if(anoAtual-anoNascimento >= 18){
+	"pode votar"
+}
+else{
+	"nao Pode Votar"
+}
