@@ -1,0 +1,9 @@
+let a
+let b
+if (a>b){
+imprime(b)
+imprime(a)}
+else{
+imprime(a)
+imprime(b)
+}
