@@ -3,6 +3,7 @@ import React from "react";
 import './App.css';
 import Listar from './Componentes/Listar.js'
 import CriarPlaylist from './Componentes/CriarPlaylist.js'
+import AdicionarTrack from './Componentes/AdicionarTrack.js'
 
 
 
