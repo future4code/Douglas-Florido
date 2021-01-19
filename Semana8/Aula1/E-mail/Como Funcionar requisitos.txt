@@ -1,0 +1,1 @@
+Decidiu-se que irá componetizar o máximo possivel do site, facilitando a entrega de responsabilidades para os integrantes do grupo e deixando o trabalho mais limpo
