@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a5db72f3.chunk.css",
+    "main.js": "/static/js/main.d6ff536e.chunk.js",
+    "main.js.map": "/static/js/main.d6ff536e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.40261604.js",
+    "runtime-main.js.map": "/static/js/runtime-main.40261604.js.map",
+    "static/js/2.d5c8efb7.chunk.js": "/static/js/2.d5c8efb7.chunk.js",
+    "static/js/2.d5c8efb7.chunk.js.map": "/static/js/2.d5c8efb7.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e2e5ea99eec366d0eed57d1b5f4372eb.js": "/precache-manifest.e2e5ea99eec366d0eed57d1b5f4372eb.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.a5db72f3.chunk.css.map": "/static/css/main.a5db72f3.chunk.css.map",
+    "static/js/2.d5c8efb7.chunk.js.LICENSE.txt": "/static/js/2.d5c8efb7.chunk.js.LICENSE.txt",
+    "static/media/Felipe.png": "/static/media/Felipe.d5b0cefc.png",
+    "static/media/Joselindo.jpg": "/static/media/Joselindo.b230718f.jpg",
+    "static/media/carolzete.png": "/static/media/carolzete.7c096ccd.png",
+    "static/media/comment_icon.svg": "/static/media/comment_icon.de299b47.svg",
+    "static/media/favorite-white.svg": "/static/media/favorite-white.042aa417.svg",
+    "static/media/favorite.svg": "/static/media/favorite.4c67d875.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40261604.js",
+    "static/js/2.d5c8efb7.chunk.js",
+    "static/css/main.a5db72f3.chunk.css",
+    "static/js/main.d6ff536e.chunk.js"
+  ]
+}

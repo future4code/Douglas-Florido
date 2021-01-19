@@ -1,0 +1,17 @@
+.containerMsg{
+    display: flex;
+    max-width: 40%;
+    height: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: left;
+    align-self: flex-start;    
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);  
+   
+}
+
+.mensagem{
+    /* display: inline-block;
+    margin:0 2px; */
+}
