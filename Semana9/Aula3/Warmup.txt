@@ -1,0 +1,18 @@
+const numEmprego 
+const anoNascimento 
+const ingressoEmpresa 
+
+if( anoNascimento - 2021 >= 65){
+console.log("Requerer Aposentadoria")
+}
+else if(ingressoEmpresa - 2021 >= 30){
+console.log("Requerer Aposentadoria")
+}
+
+else if(anoNascimento - 2021 >=60 && ingressoEmpresa -2021 >= 25){
+console.log("Requerer Aposentadoria")
+}
+
+else{
+console.log("Não Requerer")
+}

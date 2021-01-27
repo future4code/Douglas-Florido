@@ -1,0 +1,18 @@
+triangulo= false
+lado1 = lado2 = lado3 = 0
+
+getValorlado(lado1)
+getValorlado(lado2)
+getValorlado(lado3)
+
+if(lado1<(lado2+lado3)&&lado2<(lado1+lado3) && lado3<(lado2+lado1)){
+triangulo = true
+}
+
+if(triangulo === true){
+alert("é um triangulo")
+}
+
+else{
+alert("nao é um triangulo")
+}
