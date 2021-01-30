@@ -1,22 +1,51 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { render } from '@testing-library/react';
+import axios from 'axios'
 
 
 export function CardPequeno(props) {
-  const originalArray = props.arrayMatches
-  let matches = []
-  let i = 0
-  let c
-      
+  const [matches, setMatches] = useState([])
+
+  const allMatches = () => {
+    axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/douglas/matches")
+    .then((res) => {console.log(res)
+    setMatches(res.data.matches)})
+    .catch((err) => {console.log(err)})
+  }
+
+
+
+useEffect(() => {
+  allMatches()
+})
+
+const originalArray = props.arrayMatches
+
+
+return (
+  <div>
+    {matches.map(match => {
+      console.log(match)
       return (
-        <li>oi</li>
-      )    
-      
-    
-  
-  
+        <div>
+          <p>{match.name}</p>
+        </div>
+      )
+    })
 
 
+    }
+
+  </div>
+
+)
+
+
+
+
+
+
+  
 }
 
 

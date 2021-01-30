@@ -9,10 +9,13 @@ export function Contatos() {
   let i
 
   const allMatches = () => {
-    axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/matches")
+    axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/douglas/matches")
       .then((res) => {
-        setArrayMatches(res.data.matches)
+        console.log("contato")
+        console.log(res)
         console.log(res.data.matches)
+        setArrayMatches(res.data.matches)
+        
       })
       .catch((err) => { console.log(err) })
   }

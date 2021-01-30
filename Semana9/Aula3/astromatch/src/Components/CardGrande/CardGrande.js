@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -15,25 +15,25 @@ import CloseIcon from '@material-ui/icons/Close';
 
 
 
-export function CardGrande(){
+export function CardGrande() {
     const [id, setId] = useState("")
-    const [photoURL,setPhotoURL] = useState("")
+    const [photoURL, setPhotoURL] = useState("")
     const [age, setAge] = useState(0)
     const [name, setName] = useState("")
     const [bio, setBio] = useState("")
 
-    useEffect(()=>{
-        allProfile()      
-        
+    useEffect(() => {
+        allProfile()
+
     }, [])
 
-    const allProfile = () =>{
+    const allProfile = () => {
 
-        axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/person")
+        axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/douglas/person")
             .then((res) => {
                 // console.log(res)
-                setId(res.data.profile.id )
-                setPhotoURL(res.data.profile.photo )
+                setId(res.data.profile.id)
+                setPhotoURL(res.data.profile.photo)
                 setAge(Number(res.data.profile.age))
                 setName(res.data.profile.name)
                 setBio(res.data.profile.bio)
@@ -43,28 +43,40 @@ export function CardGrande(){
             })
     }
 
-const likeOrDislike = (idComing, decision) => {
-    // console.log(idComing)
-    // console.log(decision)
-    if (decision) {
-        axios.post("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/choose-person", {
-            id: { idComing },
-            choice: true
-        })
-        .then((res)=>{console.log(res)})
-        .catch((err)=>{console.log(err)})
-    }
+    const likeOrDislike = async (idComing, decision) => {
+        // console.log(idComing)
+        // console.log(decision)
+        if (decision) {
+            try {
+                const response = await axios.post(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/douglas/choose-person`,
+                    {
+                        id: { idComing },
+                        choice: true
+                    }
+                )
+                console.log(response)
+            }
+            catch (err) { console.log(err) }
 
-    else{
-        axios.post("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/choose-person", {
-            id: { idComing },
-            choice: false
-        })
-        .then((res)=>{console.log(res)})
-        .catch((err)=>{console.log(err)})
+
+
+
+        }
+
+        else {
+            try {
+                const response = await axios.post("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/douglas/choose-person",
+                    {
+                        id: { idComing },
+                        choice: false
+                    })
+                console.log(response)
+            }
+
+            catch (err) { console.log(err) }
+        }
+        allProfile()
     }
-    allProfile()    
-}
 
 
 
@@ -76,56 +88,56 @@ const likeOrDislike = (idComing, decision) => {
     //     descricao: ""
     // }    
 
-    
+
 
     // componentDidMount = () => {
     //     this.allProfiles()
     // }
 
-    
+
     // componentDidUpdate = () => {
     //     this.allProfiles()
     // }  
-        return (
-            <div>
-                <Card>
+    return (
+        <div>
+            <Card>
 
-                    <CardMedia
-                        component="img"
-                        alt="Contemplative Reptile"
-                        src={photoURL}
-                        title="Contemplative Reptile"
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
-                            {name}
-                        </Typography>
+                <CardMedia
+                    component="img"
+                    alt="Contemplative Reptile"
+                    src={photoURL}
+                    title="Contemplative Reptile"
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        {name}
+                    </Typography>
 
-                        <Typography>
-                            {age}
-                        </Typography>
+                    <Typography>
+                        {age}
+                    </Typography>
 
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            {bio}
-                        </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        {bio}
+                    </Typography>
 
-                    </CardContent>
-
-
-                    <CardActions>
-                        <Button onClick={() => {likeOrDislike(id, false)}}>
-                            <CloseIcon />
-                        </Button>
-                        <Button onClick={() => {likeOrDislike(id, true)}}>
-                            <FavoriteIcon />
-                        </Button>
-
-                    </CardActions>
-
-                </Card>
-            </div>
-        );
-    }
+                </CardContent>
 
 
-    export default CardGrande;
+                <CardActions>
+                    <Button onClick={() => { likeOrDislike(id, false) }}>
+                        <CloseIcon />
+                    </Button>
+                    <Button onClick={() => { likeOrDislike(id, true) }}>
+                        <FavoriteIcon />
+                    </Button>
+
+                </CardActions>
+
+            </Card>
+        </div>
+    );
+}
+
+
+export default CardGrande;
