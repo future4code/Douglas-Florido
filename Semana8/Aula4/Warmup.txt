@@ -1,0 +1,15 @@
+let valorMax1=0, valorMax2=0
+let v1, v2, v3
+
+if(v1>valorMax1){
+	valorMax2=valorMax1
+	valorMax1=v1
+}
+if(v2>valorMax1){
+	valorMax2=valorMax1
+	valorMax1=v2
+}
+if(v3>valorMax1){
+	valorMax2=valorMax1
+	valorMax1=v3
+}
