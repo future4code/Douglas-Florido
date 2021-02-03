@@ -12,16 +12,12 @@ export default function Router() {
   return (
     <BrowserRouter>      
       <Switch>
-
-        <Route exact path="/">
-          <LoginPage />
-        </Route>
-
+        
         <Route exact path={"/createaccount"}>
           <CreateAccount />
         </Route>
 
-        <Route exact path={"/home"}>
+        <Route exact path={"/mainpage"}>
           <MainPage />
         </Route>
 
@@ -31,6 +27,10 @@ export default function Router() {
 
         <Route exact path={"/applicationformpage"}>
           <ApplicationFormPage />
+        </Route>
+
+        <Route exact path="/">
+          <LoginPage />
         </Route>
 
       </Switch>
