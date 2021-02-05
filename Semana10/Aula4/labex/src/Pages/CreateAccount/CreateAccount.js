@@ -4,30 +4,24 @@ import { createLogin } from '../../Components/Requisitions/Requisitions.js'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 import { goToLoginPage } from '../../Routes/Walker.js'
+import useForm from '../../Components/LoginComponents/HandleLogin/HandleLogin'
 
 
 
 function CreateAccount() {
   // const [form, onChange, clear] = useForm({ email: "", password: "" });
-  const [form, setForm] = useState({ login: "", password: "" })
+  const [form, onChange, clearFields] = useForm({ email: "", password: "" })
   const history = useHistory()
 
-
-
-  const handleLogin = (event) => {
-    const { value, name } = event.target;
-    setForm({ ...form, [name]: value })
-    // console.log(name+":"+value)
-  }
 
   return (
     <div>
       <lu>
         <li><label>Login:</label>
-          <input value={form.login} onChange={handleLogin} name="login" placeholder="Text"></input></li>
+          <input value={form.email} onChange={onChange} name="email" placeholder="Text"></input></li>
 
         <li><label>Password:</label>
-          <input value={form.password} onChange={handleLogin} name="password" placeholder="Text"></input></li>
+          <input value={form.password} onChange={onChange} name="password" placeholder="Text"></input></li>
         <li><button onClick={() => { createLogin(form) }}>Create</button></li>
       </lu>
 

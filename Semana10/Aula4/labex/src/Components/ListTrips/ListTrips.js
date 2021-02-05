@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {retrieveTripData} from '../Requisitions/Requisitions'
 import Header from '../Header/Header.js'
 
 function ListTrips() {
+  const [trips, setTrips] = useState({})
+
+  
+  console.log(trips)
+  retrieveTripData(setTrips)
+  let arrayTrips = trips.data
+  
+
   return (
-    <div>
-      
-      ListTrips
-    </div>
+    arrayTrips.map((trip) => {
+      return(
+        <div>
+          <div>{trip.name}</div>
+        </div>
+      )
+    })
   );
 }
 
