@@ -1,0 +1,10 @@
+const arrayValores = [1, 2, 3, -4, 5, -6, 7, 8, 9, 0]
+let arrayValoresNegativos = []
+
+arrayValores.map((valor) => {
+	if(valor<0){
+	arrayValoresNegativos.push()
+}
+})
+
+console.log(arrayValoresNegativos)
