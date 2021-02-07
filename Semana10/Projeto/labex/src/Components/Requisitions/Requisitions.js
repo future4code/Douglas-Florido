@@ -20,8 +20,6 @@ export const createLogin = (information) => {
 
 
 export let verifyLogin = async (information, history) => {
-
-
     // console.log(information.email)
     const email = information.email
     const password = information.password

@@ -1,13 +1,41 @@
 import React, { useEffect, useState } from 'react'
-import { retrieveTripData } from '../Requisitions/Requisitions'
-import Header from '../Header/Header.js'
 import axios from 'axios'
+import { goToDetailTripPage } from '../../Routes/Walker'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core'
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275,
+    maxWidth: 300,
+    marginTop: 20,
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)',
+  },
+  title: {
+    fontSize: 20,
+  },
+  body: {
+    marginTop: 12,
+    marginBottom: 12,
+  },
+});
 
 
 
 function ListTrips() {
+  const classes = useStyles();
   const [trips, setTrips] = useState([])
   const [tripDetail, setTripDetail] = useState([])
+  const history = useHistory()
 
   useEffect(() => {
     allTrips()
@@ -23,21 +51,7 @@ function ListTrips() {
       .catch((err) => { console.log(err) })
   }
 
-  const getTripDetails = () => {
-    // console.log("cheguei no detalhe")
-    const userId = localStorage.getItem("id")
-    const userToken = localStorage.getItem("token")
-    // console.log("id:", userId)
-    // console.log("token:", userToken)
-    const headers = {
-      headers: {
-        auth: userToken
-      }
-    }
-    axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/douglas-florido/trip/${userId}`, headers)
-      .then((res) => { console.log(res) })
-      .catch((err) => { console.log(err) })
-  }
+
 
 
   if (trips !== []) {
@@ -45,12 +59,16 @@ function ListTrips() {
       <>
         {trips.map((trip) => {
           return (
-            <div onClick={() => getTripDetails(trip.id)}>
-              <p>Name: {trip.name}</p>
-              <p>Description: {trip.description}</p>
-              <p>Planet: {trip.planet}</p> <p>Duration in days: {trip.durationInDays}</p> <p>Date: {trip.date}</p>
-              <hr />
-            </div>
+            <Grid item>
+              <Card className={classes.root}>
+                <CardContent>
+                  <Typography className={classes.title} >{trip.name}</Typography >
+                  <Typography className={classes.body}>{trip.description}</Typography>
+                  <Typography className={classes.body}>Planet: {trip.planet}</Typography> <Typography>Duration: {trip.durationInDays} Days</Typography> <Typography>Date: {trip.date}</Typography>
+                  <Button variant="contained" color="primary" onClick={() => goToDetailTripPage(history, trip.id)}>Candidates</Button>
+                </CardContent>
+              </Card>
+            </Grid>
           )
         })
         }

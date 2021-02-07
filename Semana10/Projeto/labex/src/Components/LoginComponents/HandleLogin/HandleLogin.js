@@ -8,6 +8,7 @@ const useForm = (initialState) => {
     // const value = event.target.value
     // const name = event.target.name
     // console.log(name, value)
+    
     setForm({ ...form, [name]: value });  
   };
 

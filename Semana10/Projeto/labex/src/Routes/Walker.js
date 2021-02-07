@@ -1,26 +1,31 @@
 
 
   export const goToApplicationFormPage = (history) => {
-    history.push("/applicationformpage");
+    history.push("/applicationformpage")
   };
 
   export const goToCreateAccount = (history) => {
     console.log("entrei goToCreateAccount")
-    history.push("/createaccount");
+    history.push("/createaccount")
   };
   
   export const goToTripPage = (history) => {
-    history.push("/createtrippage");
+    history.push("/createtrippage")
   };
 
+  export const goToDetailTripPage = (history, tripId) => {
+    localStorage.setItem("tripId", tripId)
+    history.push("/gotodetailtrippage")
+  }
+
   export const goToLoginPage = (history) => {
-    history.push("/");
+    history.push("/")
   };
   
   
   export const goToMainPage = (history) => {
     console.log("entrei goToMaingPage")
-    history.push("/mainpage");
+    history.push("/mainpage")
   };
   
   

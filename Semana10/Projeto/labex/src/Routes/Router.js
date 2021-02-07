@@ -5,7 +5,7 @@ import ApplicationFormPage from '../Pages/ApplicationFormPage/ApplicationFormPag
 import MainPage from '../Pages/MainPage/MainPage.js'
 import CreateAccount from '../Pages/CreateAccount/CreateAccount.js'
 import CreateTripPage from '../Pages/CreateTripPage/CreateTripPage.js'
-
+import DetailTripPage from '../Pages/DetailTripPage/DetailTripPage'
 
 
 export default function Router() {
@@ -29,9 +29,16 @@ export default function Router() {
           <ApplicationFormPage />
         </Route>
 
+        <Route exact path={"/gotodetailtrippage"}>
+          <DetailTripPage/>
+        </Route>
+
         <Route exact path="/">
           <LoginPage />
         </Route>
+
+        
+      
 
       </Switch>
     </BrowserRouter>
