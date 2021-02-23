@@ -1,0 +1,23 @@
+const arrayOriginal = [1, 4, 5, 2, 3, 6, 7, 8, 9, 10]
+
+let arrayDecrescente = []
+let maior
+let i
+lex indexSplice
+
+while(arrayOriginal != []){
+maior = 0
+i = 0
+arrayOriginal.map((valor)=>{
+i++
+
+if(valor>=maior){
+maior = valor
+indexSplice=i
+}
+})
+
+arrayOriginal.splice(1,indexSplice)
+arrayDecrescente.push(maior)
+
+}

@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 
+
 export const createLogin = (information) => {
     console.log(information)
     const emaildado = information.email
@@ -44,6 +45,7 @@ export const populateTrips = () => {
     axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/douglas-florido/populate')
         .then((res) => { console.log(res) })
         .catch((err) => { console.log(err) })
+
 }
 
 

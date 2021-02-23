@@ -1,0 +1,12 @@
+state = {
+tempoFinal: 0,
+tempoInicio: 0,
+diferenca: 0
+}
+
+<input placeholder="tempo inicial"onChange={tempoInicio}/>
+<input placeholder="tempo final"onChange={tempoFinal}/>
+
+diferenca = tempoFinal-tempoInicio
+
+console.log(diferenca)
