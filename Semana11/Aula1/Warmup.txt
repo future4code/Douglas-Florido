@@ -1,0 +1,35 @@
+traduzParaP(frase){
+let i
+let j=2
+
+let adicionarP = [p]
+
+
+//percorre a palavra toda, letra por letra
+for(i=0;i< frase.lenght(); i++
+
+	//se for par, ou seja, a segunda letra da silaba faz
+	if(i%2===0){
+		//verifica se é a mesma 
+		if(frase[i] === a){
+			//adiciona a vogal, ou letras, apos o pe
+			adicionarP.push(frase[i])
+			//adiciona a silaba P + alguma coisa
+			frase.splice(j,0,` + ${adicionarP}`)
+			//volta o adicionarP ao original
+			adicionarP.splice(j-1,j-2,0)
+		}
+		else{
+			adicionarP.push(frase[i])
+
+			i++
+			j++
+			adicionarP.push(frase[i])
+			frase.splice(j,0,` + ${adicionarP}`)
+			adicionarP.splice(j-2,j-3,0)
+			j--			
+		}
+		
+		
+	}
+}

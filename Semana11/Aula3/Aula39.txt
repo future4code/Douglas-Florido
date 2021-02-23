@@ -1,0 +1,1 @@
+https://codesandbox.io/s/refatoracao-e-commerce-estado-global-2hsii?file=/src/global/GlobalState.js

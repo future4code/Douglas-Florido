@@ -1,0 +1,10 @@
+let grauCelsius=0
+let grauFahrenheit=0
+
+//pega o valor do usuario
+grauCelsius.getValor()
+
+
+grauFahrenheit = (grauCelsius*9/5)+32
+
+console.log(grauFahrenheit)
