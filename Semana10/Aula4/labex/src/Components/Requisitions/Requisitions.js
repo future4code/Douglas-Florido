@@ -1,63 +1,51 @@
 import axios from 'axios'
 
 
-export const createLogin = async (information) => {
-    try {
-        console.log(information)
-        const emaildado = information.email
-        const passworddado = information.password
-        console.log(emaildado, passworddado)
 
-        const body = {
-            email: emaildado,
-            password: passworddado
-        }
+export const createLogin = (information) => {
+    console.log(information)
+    const emaildado = information.email
+    const passworddado = information.password
+    console.log(emaildado, passworddado)
 
-        const res = await axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/douglas-florido/signup', body)
-        console.log(res)
-
+    const body = {
+        email: emaildado,
+        password: passworddado
     }
-
-    catch (err) { console.log(err) }
+    axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/douglas-florido/signup', body)
+        .then((res) => { console.log(res) })
+        .catch((err) => { console.log(err) })
 }
 
 
-export let verifyLogin = async (information, setLoginInfo) => {
-    try {
-        console.log(information.email)
-        const email = information.email
-        const password = information.password
+export let verifyLogin = (information, setLoginInfo) => {
+    console.log(information.email)
+    const email = information.email
+    const password = information.password
 
 
-        const body = {
-            email: email,
-            password: password
-        }
-
-        const res = await axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/douglas-florido/login', body)
-        setLoginInfo(res)
+    const body = {
+        email: email,
+        password: password
     }
-    catch (err) { console.log(err) }
+
+    axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/douglas-florido/login', body)
+        .then((res) => { setLoginInfo(res) })
+        .catch((err) => { console.log(err) })
+
 }
 
-
-
-export const retrieveTripData = async (information) => {
-    try {
-
-        const res = await axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/douglas-florido/trips')
-        information(res)
-
-    } catch (err) { console.log(err) }
+export const retrieveTripData = (information) => {
+    axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/douglas-florido/trips')
+        .then((res) => { information(res) })
+        .catch((err) => { console.log(err) })
 }
 
-export const populateTrips = async () => {
-    try {
-        const res = await axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/douglas-florido/populate')
-        console.log(res)
+export const populateTrips = () => {
+    axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/douglas-florido/populate')
+        .then((res) => { console.log(res) })
+        .catch((err) => { console.log(err) })
 
-    }
-    catch (err) { console.log(err) }
 }
 
 
