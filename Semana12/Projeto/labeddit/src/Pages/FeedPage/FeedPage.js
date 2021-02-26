@@ -1,9 +1,12 @@
 import React from 'react'
+import {Header} from '../../Components/Header/Header'
+import {FeedList} from '../../Components/FeedList/FeedList'
 
 function FeedPage() {
     return (
       <div>
-        FeedPage
+        <Header/>
+        <FeedList/>
       </div>
     );
   }

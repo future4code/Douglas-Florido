@@ -1,16 +1,22 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
+import useForm from '../../Components/CustomHook/CustomHook'
+import { goToSignuppage } from '../../Routes/Walker';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import {login} from '../../Components/Requisitions/Requisitions'
 
 function LoginPage() {
-    return (
-      <div>
-        <input placeholder="E-mail"></input>
-        <input placeholder="Password"></input>
-        <Button variant="contained" color="primary">Login</Button>
-        <Button variant="contained" color="primary">Create Your Account</Button>
-      </div>
-    );
-  }
-  
-  export default LoginPage;
-  
+  const [form, onChange, clear] = useForm({ email: "", password: "" })
+  let history = useHistory()
+
+  return (
+    <div>
+      <input type="email" name="email" placeholder="E-mail" value={form.email} onChange={onChange}></input>
+      <input type="password" name="password" placeholder="Password" value={form.password}onChange={onChange}></input>
+      <Button variant="contained" color="primary" onClick={() => login(form,history)}>Login</Button>
+      <Button variant="contained" color="primary" onClick={() => goToSignuppage(history)}>Create Your Account</Button>
+    </div>
+  );
+}
+
+export default LoginPage;

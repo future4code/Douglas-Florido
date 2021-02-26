@@ -3,7 +3,7 @@ import React from 'react'
 function ErrorPage() {
     return (
       <div>
-        ErrorPage
+        <img url={'./4042.jpg'}/>
       </div>
     );
   }
