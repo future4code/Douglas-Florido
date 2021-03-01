@@ -5,8 +5,17 @@ import {FeedListDetail} from '../FeedListDetail/FeedListDetail'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import {goToPostpage} from '../../Routes/Walker'
 import useForm from '../CustomHook/CustomHook'
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button'
+import {useStyles} from './Styled'
+import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
+import ThumbDownAltOutlinedIcon from '@material-ui/icons/ThumbDownAltOutlined';
+import CommentOutlinedIcon from '@material-ui/icons/CommentOutlined';
 
 export const FeedList = () => {
+    const classes = useStyles()
     const [form, setForm] = useState([]);
     const[info, onChange,clear] = useForm({title: "", text: ""})
     const history = useHistory()
@@ -35,24 +44,25 @@ export const FeedList = () => {
 
                 form && form.map((post) => {
                     return (
-                        <>
-                            <hr />
-                            <h1>
+                        <Card variant="outlined">
+                            <CardContent>
+                            <Typography>
                                 {post.title}
-                            </h1>
-                            <h2>
+                            </Typography>
+                            <Typography>
                                 {post.text}
-                            </h2>
-                            <h3>
+                            </Typography>
+                            <Typography>
                                 {post.username}
-                            </h3>
-                            <button onClick={() => likeOrDeslike(post.id, 1)}>like</button>
+                            </Typography>
+                            
+                            <Button variant="contained" onClick={() => likeOrDeslike(post.id, 1)}><ThumbUpAltOutlinedIcon/></Button>
                             <p>Votes: {post.votesCount}</p>
-                            <button onClick={() => likeOrDeslike(post.id, 0)}>deslike</button>
+                            <Button variant="contained" onClick={() => likeOrDeslike(post.id, 0)}><ThumbDownAltOutlinedIcon/></Button>
                             <p>Comments: {post.commentsCount}</p>
-                            <button onClick={() => listDetail(post)}>comment</button>
-                            <hr />
-                        </>
+                            <Button variant="contained" onClick={() => listDetail(post)}><CommentOutlinedIcon/></Button>
+                            </CardContent>
+                        </Card>
                     )
                 })
             }

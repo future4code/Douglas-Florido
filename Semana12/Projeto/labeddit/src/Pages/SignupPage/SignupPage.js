@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button'
 import useForm from '../../Components/CustomHook/CustomHook'
 import { useHistory } from "react-router-dom";
 import { signup } from '../../Components/Requisitions/Requisitions'
+import {Header} from '../../Components/Header/Header'
 
 function SignupPage() {
   const history = useHistory()
@@ -13,6 +14,8 @@ function SignupPage() {
 
 
   return (
+    <>
+    <Header/>
     <form onSubmit={() => signup(form)}>
       <input name="email" type="email" placeholder="E-mail" value={form.email} onChange={onChange}></input>
       <input name="password" type="password" placeholder="Password" value={form.password} onChange={onChange}></input>
@@ -20,6 +23,7 @@ function SignupPage() {
 
       <Button variant="contained" color="primary" onClick={() => signup(form, clear)}>Create</Button>
     </form>
+    </>
   );
 }
 
