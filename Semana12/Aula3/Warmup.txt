@@ -1,0 +1,3 @@
+const minhaFuncao = (num,casas) =>{
+return num.toFixed(casas)
+}

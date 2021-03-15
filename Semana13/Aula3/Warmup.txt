@@ -1,0 +1,9 @@
+const entrada
+let maiorNum=-infinity
+let menorNum = infinity
+
+for(let i=0; i<entrada.lenght; i++){
+if(entrada[i] > maiorNum) { maiorNum=entrada[i] }
+if(entrada[i] < menorNum { menorNum=entrada[i] }
+
+}

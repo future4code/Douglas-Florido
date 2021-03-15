@@ -1,0 +1,13 @@
+let entrada
+let soma = 0
+let mult = 1
+let i = 0
+for(i=0;i<entrada;i++){
+soma+=entrada[i]
+mult= mult*entrada[i]
+}
+
+
+console.log("soma dos itens, soma)
+console.log("qtde de itens", entrada.lenght)
+console.log("multiplicação", mult)

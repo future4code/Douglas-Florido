@@ -1,0 +1,5 @@
+let entrada
+let arraySaida=[]
+
+for(let i=0; i< entrada.length; i++){ arraySaida[i] = entrada[i] }
+console.log(arraySaida)
