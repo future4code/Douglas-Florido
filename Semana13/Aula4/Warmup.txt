@@ -1,0 +1,5 @@
+const entradaString
+
+console.log("tamanho da String", entradaString.length)
+console.log("primeira letra", entradaString[0])
+console.log("ultima letra", entradaString[entradaString.length])

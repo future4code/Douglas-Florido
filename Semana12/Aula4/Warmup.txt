@@ -1,0 +1,4 @@
+let frase
+let caracter
+
+console.log(frase.split(caracter.length-1))

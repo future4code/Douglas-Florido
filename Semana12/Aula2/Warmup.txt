@@ -1,0 +1,9 @@
+const stringRecebida
+
+if(stringRecebida === ""){
+console.log(true)
+}
+
+else{
+console.log(false)
+}
