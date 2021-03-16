@@ -1,0 +1,14 @@
+{
+   "name": "first-script",
+   "version": "1.0.0",
+   "main": "index.js",
+   "scripts": {
+      "build": "tsc",
+      "start": "npm run build && node ./build/index.js",
+      "ex4":"npm run build && node ./build/exercise4.js"
+   },
+   "license": "ISC",
+   "dependencies": {
+      "typescript": "^4.2.3"
+   }
+}

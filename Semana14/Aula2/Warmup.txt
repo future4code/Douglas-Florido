@@ -1,0 +1,8 @@
+1) o erro é em decorrencia do Prompt, ele afirma q o prompt nao é definido, ou seja, o prompt nao é suportado pelo node
+
+2) utilizaria outra alternativa, que nao fosse a função prompt
+como o const prompt = require('prompt-sync')();
+
+3)É util para a implementação de funções que o javascript possui, poré o próprio node ainda nao tem, como tipagem de dados
+
+4) vish...
