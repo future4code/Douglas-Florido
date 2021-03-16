@@ -1,0 +1,20 @@
+{
+  "name": "Exercicios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "ex1": "npm run build && node ./build/exercicio1.js",
+    "ex2": "npm run build && node ./build/exercicio2.js",
+    "ex3": "npm run build && node ./build/exercicio3.js",
+    "ex4": "npm run build && node ./build/exercicio4.js"
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.2.3"
+  }
+}
