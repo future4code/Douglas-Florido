@@ -78,21 +78,46 @@ app.get("/users", (req, res) => {
 //b) Você consegue pensar em um jeito de garantir que apenas `types` válidos sejam utilizados?
 //r) sim, caso os tipos nao sejam iguais ao gabarito q eu criei entao eu jogo um erro, para o tipo dar certo
 //colocamos um enum para garantir q só tenham 2s tipos
-app.get("/search/:type", (req, res) => {
+// app.get("/search/:type", (req: Request, res: Response) => {
+//     let errorCode: number = 400;
+//     try {
+//         let type: string = req.params.type
+//         let myUser: object[] = []
+//         if (!(type === "ADMIN" || type === "NORMAL")) {
+//             throw new Error("Type not valid")
+//         }
+//         const myUsers = users
+//         myUsers.forEach(u => {
+//             if (u.type === type) {
+//                 myUser.push(u)
+//             }
+//         });
+//         res.status(200).send(myUser)
+//     } catch (error) {
+//         res.status(errorCode).send(error.message);
+//     }
+// })
+//Exercicio 3
+//a) Qual é o tipo de envio de parâmetro que costuma ser utilizado por aqui?
+//r) o tipo é por path params utilizado, já q estamos usando get e não
+//possui body
+//b)Altere este endpoint para que ele devolva uma mensagem de erro caso
+//nenhum usuário tenha sido encontrado.
+app.get("/search/:name", (req, res) => {
     let errorCode = 400;
     try {
-        let type = req.params.type;
-        let myUser = [];
-        if (!(type === "ADMIN" || type === "NORMAL")) {
-            throw new Error("Type not valid");
-        }
+        let name = req.params.name;
+        console.log(name);
+        // if(!name){
+        //     throw new Error("Type not valid")
+        // }
         const myUsers = users;
-        myUsers.forEach(u => {
-            if (u.type === type) {
-                myUser.push(u);
-            }
-        });
-        res.status(200).send(myUser);
+        const searchedName = myUsers.find((u) => { return u.name === name; });
+        if (!searchedName) {
+            errorCode = 404;
+            throw new Error("Name Not Found");
+        }
+        res.status(200).send(searchedName);
     }
     catch (error) {
         res.status(errorCode).send(error.message);

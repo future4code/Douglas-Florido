@@ -99,7 +99,7 @@ app.get("/users", (req: Request, res: Response) => {
 //r) sim, caso os tipos nao sejam iguais ao gabarito q eu criei entao eu jogo um erro, para o tipo dar certo
 //colocamos um enum para garantir q só tenham 2s tipos
 
-app.get("/search/:type", (req: Request, res: Response) => {
+app.get("/search/type/:type", (req: Request, res: Response) => {
 
 
     let errorCode: number = 400;
@@ -114,7 +114,7 @@ app.get("/search/:type", (req: Request, res: Response) => {
         }
         const myUsers = users
         myUsers.forEach(u => {
-            if(u.type === type){
+            if (u.type === type) {
                 myUser.push(u)
             }
         });
@@ -127,4 +127,39 @@ app.get("/search/:type", (req: Request, res: Response) => {
     }
 
 
+})
+
+
+//Exercicio 3
+//a) Qual é o tipo de envio de parâmetro que costuma ser utilizado por aqui?
+//r) o tipo é por path params utilizado, já q estamos usando get e não
+//possui body
+
+//b)Altere este endpoint para que ele devolva uma mensagem de erro caso
+//nenhum usuário tenha sido encontrado.
+
+app.get("/search/name/:name", (req: Request, res: Response) => {
+
+    let errorCode: number = 400;
+    
+    try {
+
+        let name: string = req.params.name
+        console.log(name)
+        // if(!name){
+        //     throw new Error("Type not valid")
+        // }
+        const myUsers = users
+        const searchedName = myUsers.find((u) => {return u.name === name })
+
+        if(!searchedName){
+            errorCode = 404
+            throw new Error("Name Not Found")
+        }
+
+        res.status(200).send(searchedName)
+
+    } catch (error) {
+        res.status(errorCode).send(error.message)
+    }
 })
