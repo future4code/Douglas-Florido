@@ -1,0 +1,8 @@
+API  é uma Interação entre o Banco de dados e o Front-end
+
+Eu conheço o Elixir, mas nao sei se é uma API expecificamente
+
+Nunca ouvi falar de CRUD.
+CRUD é um acronimo das palavras
+Create, Read, Update e Delete, muito utilizado em banco de dados
+Relacionais
