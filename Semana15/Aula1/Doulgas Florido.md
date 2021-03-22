@@ -249,3 +249,138 @@ WHERE (name LIKE "G%" || name LIKE "g%" || name LIKE "%g" || name LIKE "%G" || n
 ~~~SQL
 SELECT * FROM Actor WHERE (name LIKE "G%" || name LIKE "g%" || name LIKE "%g" || name LIKE "%G" || name LIKE "%G%" || name LIKE "%g%" || name LIKE "A%" || name LIKE "a%" || name LIKE "%a" || name LIKE "%A" || name LIKE "%A%" || name LIKE "%a%") AND (salary  > 350000 AND salary  < 900000)
 ~~~
+
+### Exercicio 5
+
+> a) Escreva a query que cria essa tabela. Para sinopse, utilize o tipo TEXT, pesquise sobre ele se precisar.
+> Explique a query resumidamente.
+~~~SQL
+CREATE TABLE Movies (
+    id VARCHAR(255) PRIMARY KEY,
+    nome VARCHAR (255) NOT NULL,
+    sinopse VARCHAR (255) NOT NULL,    
+    data_de_lancamento DATE NOT NULL,
+	avaliacao INT NOT NULL
+);
+~~~
+Create tables semelhante ao primeiro exercicio, porém a diferenca foi a avaliacao, q é do tipo INT, ou seja, Inteiro,
+nao recebe valores quebrados, entao só valores inteiros positivos ou negativos, os outros Varchar são Strings e o 
+Date é do tipo string no formato de data
+
+> Crie 4 filmes com as seguintes informações: 
+> b) 
+> id: `001`
+> Título: `Se Eu Fosse Você`
+> Sinopse: `Cláudio e Helena são casados há muitos anos e enfrentam a rotina do casamento. Um dia eles são atingidos por um > fenômeno inexplicável e trocam de corpos`
+> Data de lançamento: `06/01/2006`
+> Avaliação: `7`
+
+~~~SQL
+INSERT INTO Movies (id, nome, sinopse, data_de_lancamento, avaliacao)
+VALUES(
+  "001", 
+  "Se Eu Fosse Você",
+  "Cláudio e Helena são casados há muitos anos e enfrentam a rotina do casamento. Um dia eles são atingidos por um fenômeno inexplicável e trocam de corpos" ,
+  "2006-01-06", 
+  7
+);
+~~~
+
+> c)
+> id: `002`
+> Título: `Doce de mãe`
+> Sinopse: `Dona Picucha, uma animada senhora de 85 anos, sempre causa grandes confusões. A vida dela e dos seus quatro  filhos sofre uma reviravolta depois que Zaida, empregada e amiga de Dona Picucha, anuncia que vai se casar e não poderá mais morar com ela`
+> Data de lançamento: `27/12/2012`
+> Avaliação: `10`
+
+~~~SQL
+INSERT INTO Movies (id, nome, sinopse, data_de_lancamento, avaliacao)
+VALUES(
+  "002", 
+  "Doce de mãe",
+  "Dona Picucha, uma animada senhora de 85 anos, sempre causa grandes confusões. A vida dela e dos seus quatro filhos sofre uma reviravolta depois que Zaida, empregada e amiga de Dona Picucha, anuncia que vai se casar e não poderá mais morar com ela" ,
+  "2012-12-27", 
+  10
+);
+~~~
+
+> d)
+> id: `003`
+> Título: `Dona Flor e Seus Dois Maridos`
+> Sinopse: `Dona Flor é uma sedutora professora de culinária casada com Vadinho, que só quer saber de farras e jogatina nas > boates. A vida de abusos acaba por acarretar sua morte precoce.`
+> Data de lançamento: `02/11/2017`
+> Avaliação: `8`
+
+~~~SQL
+INSERT INTO Movies (id, nome, sinopse, data_de_lancamento, avaliacao)
+VALUES(
+  "003", 
+  "Dona Flor e Seus Dois Maridos",
+  "Dona Flor é uma sedutora professora de culinária casada com Vadinho, que só quer saber de farras e jogatina nas boates. A vida de abusos acaba por acarretar sua morte precoce." ,
+  "2017-11-02", 
+  08
+);
+~~~
+
+> e) Faça um com um filme da sua Escolha
+
+~~~SQL
+INSERT INTO Movies (id, nome, sinopse, data_de_lancamento, avaliacao)
+VALUES(
+  "004", 
+  "O Iluminado",
+  "Jack Torrance se torna caseiro de inverno do isolado Hotel Overlook, nas montanhas do Colorado, na esperança de curar seu bloqueio de escritor. Ele se instala com a esposa Wendy e o filho Danny, que é atormentando por premonições." ,
+  "1980-12-25", 
+  10
+);
+~~~
+
+### Exercicio 6
+
+> Escreva uma query que:
+
+> a. Retorne o id, título e avaliação a partir de um id específico;
+
+~~~SQL
+SELECT id, nome, avaliacao FROM Movies WHERE id LIKE "001";
+~~~
+
+> b. Retorne um filme a partir de um nome específico;
+
+~~~SQL
+SELECT * FROM Movies WHERE nome LIKE "O Iluminado";
+~~~
+> c. Retorne o id, título e sinopse dos filmes com avaliação mínima de `7`
+
+~~~SQL
+SELECT id, nome, sinopse FROM Movies WHERE avaliacao>=7;
+~~~
+
+
+### Exercicio 7
+
+> Escreva uma query que:
+> a) Retorna um filme cujo título contenha a palavra `vida`
+~~~SQL
+SELECT * FROM Movies WHERE (nome LIKE "vida%" || nome LIKE "%vida" || nome LIKE "%vida%");
+~~~
+
+> b) Realize a pesquisa de um filme, ou seja: pesquise se o termo de busca está contido no título ou na sinopse. Utilize qualquer `TERMO DE BUSCA` para exemplificar.
+
+
+
+> c) Procure por todos os filmes que já tenham lançado
+
+> d) Procure por algum filme que já tenha lançado, com o termo de busca contido no título ou sinopse e com a avaliação maior do que `7`.
+
+
+
+
+
+
+
+
+
+
+
+
