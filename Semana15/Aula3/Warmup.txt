@@ -1,0 +1,3 @@
+QueryBuilder é uma biblioteca q possibilita a utilização de linhas de comando dentro do código, podendo efetuar CRUD dentro de uma aplicação.
+
+Já o Mapeamento objeto-relacional ou ORM é uma técnica q transforma as tabelas em objetos, facilitando a programação orientada a objeto
