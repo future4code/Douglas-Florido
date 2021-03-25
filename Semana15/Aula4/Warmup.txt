@@ -1,0 +1,7 @@
+Um banco de dados relacional é um tipo de banco de dados que armazena e fornece acesso a pontos de dados relacionados entre si.
+
+Chave Estrangeira é umtoken dizendo que a informação se encotnra em outra tabela
+
+as Relações do Banco de dados Relacional são as tabelas! No Caso as relações delas com todas as outras tabelas através de chaves primárias e estrangeiras
+
+Joins são operações entre conjuntos de dados.
