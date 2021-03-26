@@ -1,0 +1,14 @@
+PUT  http://localhost:3003/user
+
+Content-Type: application/JSON
+
+{
+    "name": "Felipe Moura Brasil",
+	"nickname": "Felipe Moura Brasil",
+	"email": "Felipe@Brasil.com"
+}
+
+# GET http://localhost:3003/user/2
+
+
+
