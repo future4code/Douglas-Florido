@@ -1,5 +1,4 @@
 PUT  http://localhost:3003/user
-
 Content-Type: application/JSON
 
 {
@@ -8,7 +7,9 @@ Content-Type: application/JSON
 	"email": "Felipe@Brasil.com"
 }
 
-# GET http://localhost:3003/user/2
+###
+
+ GET http://localhost:3003/user/2
 
 
 
