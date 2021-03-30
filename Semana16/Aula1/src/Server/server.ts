@@ -2,10 +2,14 @@ import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import knex from "knex";
 import { AddressInfo } from "net";
+import dotenv from 'dotenv';
 
 export const app: Express = express();
 app.use(express.json());
 app.use(cors())
+
+
+dotenv.config()
 
 export const connection = knex({
     client: "mysql",
