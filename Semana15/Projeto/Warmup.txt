@@ -1,0 +1,7 @@
+const horario = (entrada) => {
+
+let segundos = entrada%60
+let min = entrada%3600 
+let horas = entrada/3600
+return(`${horas}h ${min}m ${segundos}s`)
+}
