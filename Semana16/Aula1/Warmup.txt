@@ -1,0 +1,3 @@
+Uma Estratégia utilizada pela maioria das redes sociais é delimitar uma quantidade máxima de Posts ou Feed e ao chegar no fim da barra de rolagem ele atualiza mais uma quantidade X de posts.
+
+Outra Forma, também utilizada por redes sociais é jogar no seu feed apenas os posts com maior popularidade ou afinidade ao usuario, fazendo com que a quantidade de posts se torne bem menor
