@@ -14,7 +14,7 @@ export const getCertainUser = async (req: Request, res: Response) => {
          `
       );
 
-      if(!response[0]){
+      if (!response[0]) {
          throw new Error("Name not Found")
       }
 
@@ -28,3 +28,29 @@ export const getCertainUser = async (req: Request, res: Response) => {
 
 }
 
+export const getUserByType = async (req: Request, res: Response) => {
+   try {
+      const type = req.params.type as string
+
+      let response = await connection.raw(
+      `
+      SELECT * FROM aula48_exercicio
+      WHERE (type = "${type}");
+      `
+      )
+
+      res.status(200).send(response[0])
+   } catch (error) {
+      res.status(400).send(error)
+   }
+}
+
+export const orderByNameOrType = async (req: Request, res: Response) => {
+   try {
+      const type = req.query.type
+      const name = req.query.name
+      if(!name && type)
+   } catch (error) {
+      res.status(400).send(error)
+   }
+}
