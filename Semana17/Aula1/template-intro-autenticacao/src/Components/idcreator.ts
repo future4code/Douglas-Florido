@@ -13,17 +13,18 @@ console.log("Generated Id: ", idcreator);
 export default idcreator
 
 // Exercicio 3 letra b
-const timeExpires = "1min"
-export const idgenerator = (input: AuthenticationData) => {
-    const token = jwt.sign(
-        {
-            id: input.id,
-        },
+const expiresIn = '1min'
+export const idgenerator = (input: AuthenticationData): string => {
 
-        process.env.JWT_KEY as string,
+    return jwt.sign(
+        input,
+
+        process.env.JWT_KEY! as string,        
+
+        
         {
-            timeExpires
+            expiresIn
         }
-    );
-    return token;
+        
+    ); 
 }
