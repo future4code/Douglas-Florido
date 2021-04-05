@@ -1,0 +1,9 @@
+const entrada
+
+let verificador=true
+
+for(let i=0; i<entrada.length; i++){
+if(entrada[i] !== 0 && entrada[i] !== 1 && entrada[i] !== 2 && entrada[i] !== 3 && entrada[i] !== 4 && entrada[i] !== 5 && entrada[i] !== 6 && entrada[i] !== 7 && entrada[i] !== 8 && entrada[i] !== 9) { verificador = false }
+}
+
+return verificador

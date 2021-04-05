@@ -1,0 +1,8 @@
+let string1
+let string2
+
+string1 = string1.lower()
+string2 = string2.lower()
+
+if(string1 = string2){ return true }
+else{ return false }
