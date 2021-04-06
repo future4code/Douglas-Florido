@@ -1,0 +1,5 @@
+1. MD5 é um gerador de Hash, ou seja, ele cria hashes e também consegue verificar arquivvos em hash.
+
+2. Ele parou de ser usado por ser muito inseguro, o motivo da insegurança é sua velocidade, ou seja, o atacante, com um computador comum, consegue atacar o método MD5 sem muito problema, já que a criptografia do MD5 é rápida.
+
+3. Uma outra forma de criptografar a senha do usuário é o método uuid
