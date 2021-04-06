@@ -17,12 +17,12 @@ export const getTokenData = (
 ): authenticationData | null => {
    try {
 
-      const { id } = jwt.verify(
+      const { id, role } = jwt.verify(
          token,
          String(process.env.JWT_KEY)
       ) as authenticationData
 
-      return { id }
+      return { id, role }
       
    } catch (error) {
       return null
