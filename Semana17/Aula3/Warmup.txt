@@ -1,0 +1,3 @@
+1. Atualmente o processo de autenticação é feito pegando a senha encriptada do usuário e o login e comparando, caso sejam iguais o usuário recebe um token e é liberado para acessar a página 
+
+2. o "refresh token" é um token com tempo de expiração, assim como utilizavamos na aula de segunda, mas sem o token, usando um tempo máximo de expiração
