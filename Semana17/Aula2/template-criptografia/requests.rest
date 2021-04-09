@@ -1,0 +1,33 @@
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+   "name": "Norman Osbourne", 
+   "nickname": "Green Goblin", 
+   "email": "osbourne@oscorp.com" ,
+   "password": "ihatepeter"
+}
+
+###
+
+# @name login
+
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+   "email": "osbourne@oscorp.com" ,
+   "password": "ihatepeter"
+}
+
+###
+
+@token = {{login.response.body.token}}
+
+PUT http://localhost:3003/user/edit
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+   "name": "Harry Osbourne" 
+}
