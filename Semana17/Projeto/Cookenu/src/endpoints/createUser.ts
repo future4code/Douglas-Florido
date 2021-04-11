@@ -32,7 +32,7 @@ export default async function createUser(
          `
       )
       console.log(`${id}`, typeof(`${id}`))
-      let token = generateToken(`${id}`)
+      let token = generateToken({id})
       console.log("token: ",token)
 
       res.status(201).send(token)

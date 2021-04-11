@@ -22,9 +22,7 @@ export default async function login(
          `
          SELECT password FROM User WHERE (email = "${email}");
          `
-      )
-
-      
+      )      
 
       // console.log(realPassword[0], typeof realPassword)
       let enterOrNot = verifier(password, realPassword)
@@ -32,12 +30,15 @@ export default async function login(
          throw new Error("E-mail or Password incorrect")
       }
       
-      let token = generateToken(`tokenzinho`)
+      let token = generateToken({email})
 
       // console.log("token: ",token)
 
+      // localStorage.setItem("token", token)
+
       res.status(200).send(token)
 
+     
 
 
 

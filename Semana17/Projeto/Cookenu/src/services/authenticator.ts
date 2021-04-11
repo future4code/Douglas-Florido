@@ -4,18 +4,9 @@ import dotenv from "dotenv"
 
 dotenv.config()
 
-// const myToken = jwt.sign(
-//    {
-//       id: "123456"
-//    },
-//    "hklsdf9347583945yfgdfiguydifgdgdf",
-//    {
-//       expiresIn: "24d"
-//    }
-// )
 
 export const generateToken = (
-   payload: string
+   payload: any
 ): string => {
    return jwt.sign(
       payload,
@@ -26,12 +17,12 @@ export const generateToken = (
 
 export const getTokenData = (
    token: string
-): authenticationData | null => {
+) => {
    try {
 
-      const { id, role } = jwt.verify(token, process.env.JWT_KEY!) as authenticationData
-
-      return { id, role }
+      const result: any  = jwt.verify(token, process.env.JWT_KEY!) 
+      // console.log("result: ", result)
+      return { result }
 
    } catch (error) {
       
@@ -41,9 +32,3 @@ export const getTokenData = (
 }
 
 
-// console.log(
-//    jwt.verify(
-//       myToken,
-//       "hklsdf9347583945yfgdfiguydifgdgdf"
-//    )
-// )
