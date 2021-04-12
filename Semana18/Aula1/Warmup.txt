@@ -1,0 +1,3 @@
+Iniciaria realizando o planejamento do Banco de dados, separando as tabelas e verificando as chaves primárias e estrangeiras, em seguida criaria as tabelas.
+
+Seguindo a lógica criaria as pastas e organizaria o ambiente no VSCode, mais a frente faria o primeiro endpoint q é o Cadastrar usuário, em conseguinte faria o aprovar usuário e pegar o usuário pelo id, por ordem crescente de dificuldade.
