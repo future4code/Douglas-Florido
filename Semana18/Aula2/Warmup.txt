@@ -1,0 +1,5 @@
+Pode ajudar a organizar de maneira mais visivel o código, trazendo um ambiente mais amigável e de facil leitura
+
+Criaria um Endpoint que chamaria as duas entidades. 
+por exemplo se ele precisasse fazer um get e em seguida post
+faria uma Funcao que chamaria o get, em seguida chamaria o post, porém ambas as chamadas estariam da pasta Data, separadas
