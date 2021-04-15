@@ -1,0 +1,3 @@
+a) a KeyWord acredito q extende as funções da classe para todas do React.Component, ou seja, todos os métodos que REact.Component tem, a classe "MyComponent" tb terá.
+
+b) Talvez pq a funcao "super" faz com que as "props" adquiram esses métodos da função "MyComponent"

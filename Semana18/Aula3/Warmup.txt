@@ -1,0 +1,16 @@
+1.
+
+type music = {
+nome: string,
+banda: string,
+album: string,
+ano: string
+}
+
+
+3. 
+let qtde_musica = connection.raw(`
+SELECT * FROM music;
+`)
+
+console.log(qtde_musica[0].length)
