@@ -1,0 +1,6 @@
+1) um dos erros é a variável "musics" fora da função
+deve ser colocada dentro da função
+
+além disso o ideal seria deixar claro os componentes do código, já que, apesar de alguns comentários, ainda existe mta coisa confusa
+
+2) faltou o res.send, além disso a funcao está correta, bem clara se comparada com a outra

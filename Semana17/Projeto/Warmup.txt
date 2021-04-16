@@ -1,0 +1,11 @@
+const entrada
+
+let invertido
+
+for(let i=0; i<entrada.lenght; i++) {
+let posicaoInvertida = entrada-i-1
+invertido[i] = entrada[posicaoInvertida]
+
+}
+
+return invertido
