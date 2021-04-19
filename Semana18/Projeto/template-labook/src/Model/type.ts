@@ -18,6 +18,14 @@ export type userToBusinessBTO = {
     password: string
 }
 
+export type businessToUserBTO = {
+    id: string,
+    name: string,
+    email: string,
+    password: string
+    
+}
+
 export type Comments = {
     fk_user: string,
     fk_post: string,
@@ -34,6 +42,7 @@ export type Post = {
 }
 
 export type authenticationData = {
-    id: string
+    id: string,
+    email: string
  }
 

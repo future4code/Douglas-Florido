@@ -22,5 +22,5 @@ export function generateToken(
        process.env.JWT_KEY as string
     )
  
-    return { id: result.id, }
+    return { id: result.id, email: result.email }
  }

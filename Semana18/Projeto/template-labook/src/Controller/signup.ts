@@ -1,5 +1,7 @@
 import { Request, Response } from "express"
-import { userToBusinessBTO } from "../Model/type"
+import { signupBusiness } from "../Business/signupBusiness"
+import { signupData } from "../Data/signupData"
+import { businessToUserBTO, userToBusinessBTO } from "../Model/type"
 import { generateId } from "../Services/generateId"
 
 export const signup = async (req: Request, res: Response) => {
@@ -12,12 +14,13 @@ export const signup = async (req: Request, res: Response) => {
             res.statusCode = 406
             message = '"name", "email" and "password" must be provided'
             throw new Error(message)
-         }
+        }
 
-         const 
-         
+        const info: businessToUserBTO =  await signupBusiness({name, email, password})
 
+        const token: string = await signupData(info)  
          
+        return token
 
     } catch (error) {
 
