@@ -1,0 +1,18 @@
+1)
+
+const fatorial = (entrada) => {
+let saida=1
+
+if(entrada.length === 0){
+return 1;
+}
+
+for(let i=0; i<entrada.length; i++){
+	
+	
+	saida=saida*(i+1)
+
+}
+
+return saida
+}
