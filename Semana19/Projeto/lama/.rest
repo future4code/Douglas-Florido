@@ -1,0 +1,30 @@
+### Signup
+POST http://localhost:3000/user/signup
+Content-Type: application/json
+
+{
+    "name": "Douglão",
+    "email": "douglas@show.com",
+    "password": "123456",
+    "role": "NORMAL"
+}
+
+### Login
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{    
+    "email": "douglas@show.com",
+    "password": "123456"
+}
+
+
+### 
+POST http://localhost:3000/band/signup/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM3NmI0OGE5LTY5ZDAtNGI4Mi04YTRmLTNjZGZlODA2ZjExZSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2MTkyODgwNDQsImV4cCI6MTYxOTI4ODk0NH0.5IZ5xHbqdUXEhfm1OYKiE_mslo_88JU6Vl9UTT8nPsY
+Content-Type: application/json
+
+{    
+    "name": "alice in chains",
+    "music_genre": "rock",
+    "responsible": "Jerry Cantrell", 
+}

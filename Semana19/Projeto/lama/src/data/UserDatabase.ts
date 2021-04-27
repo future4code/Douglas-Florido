@@ -2,8 +2,11 @@ import { BaseDatabase } from "./BaseDatabase";
 import { User } from "../model/User";
 
 export class UserDatabase extends BaseDatabase {
+  createBand(id: string, name: string, genre: string, responsible: string) {
+      throw new Error("Method not implemented.");
+  }
 
-  private static TABLE_NAME = "";
+  private static TABLE_NAME = "NOME_TABELAS_USUÁRIOS";
 
   public async createUser(
     id: string,
