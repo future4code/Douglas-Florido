@@ -1,0 +1,6 @@
+const entrada1
+const entrada2
+
+const result = entrada1.localeCompare(entrada2)
+
+console.log(result)
