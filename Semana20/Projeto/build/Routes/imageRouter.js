@@ -9,4 +9,5 @@ const imageController_1 = require("../Controller/imageController");
 exports.imageRouter = express_1.default.Router();
 const imageController = new imageController_1.ImageController();
 exports.imageRouter.post("/insert/:token", imageController.insert);
+exports.imageRouter.get("/:token/:id", imageController.getMusicById);
 //# sourceMappingURL=imageRouter.js.map

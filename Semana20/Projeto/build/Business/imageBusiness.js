@@ -31,6 +31,27 @@ class ImageBusiness {
             yield this.imageDatabase.insertImage({ id, subtitle: image.subtitle, URL: image.URL, fk_user: tokenInfo.id });
         });
     }
+    getMusicById(image) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (!image.id) {
+                throw new InvalidInputError_1.InvalidInputError("Missed Input");
+            }
+            if (!image.token) {
+                throw new InvalidInputError_1.InvalidInputError("Please Login Again");
+            }
+            const tokenInfo = yield this.authenticator.getTokenData(image.token);
+            if (tokenInfo.id === image.id) {
+                const result = yield this.imageDatabase.getUserById(tokenInfo.id);
+                console.log(result);
+                return result;
+            }
+            else {
+                const result = yield this.imageDatabase.getMusicById(tokenInfo.id);
+                console.log(result);
+                return result;
+            }
+        });
+    }
 }
 exports.ImageBusiness = ImageBusiness;
 //# sourceMappingURL=imageBusiness.js.map

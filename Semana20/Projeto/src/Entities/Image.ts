@@ -16,3 +16,8 @@ export type ImageComplete = {
     URL: string,
     fk_user: string
 }
+
+export type ImageTokenId = {
+    token: string,
+    id: string
+}

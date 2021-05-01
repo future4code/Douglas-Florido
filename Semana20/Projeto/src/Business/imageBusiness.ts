@@ -1,6 +1,6 @@
 import { ImageDatabase } from "../Data/imageDatabase";
 import { UserDatabase } from "../Data/userDatabase";
-import { ImageToBusiness } from "../Entities/Image";
+import { ImageToBusiness, ImageTokenId } from "../Entities/Image";
 import { AuthenticationData, UserComplete, UserInput } from "../Entities/User";
 import { InvalidInputError } from "../Error/InvalidInputError";
 import { HashManager } from "../Services/HashManager";
@@ -12,18 +12,18 @@ export class ImageBusiness {
         private imageDatabase: ImageDatabase,
         private idGenerator: IdGenerator,
         private hashManager: HashManager,
-        private authenticator: TokenManager        
-    ){}
-    
-    async insertImage(image: ImageToBusiness) { 
-        if(!image.subtitle || !image.URL){
+        private authenticator: TokenManager
+    ) { }
+
+    async insertImage(image: ImageToBusiness) {
+        if (!image.subtitle || !image.URL) {
             throw new InvalidInputError("Invalid input to insert Image")
         }
 
-        if(!image.token){
+        if (!image.token) {
             throw new InvalidInputError("Please Login Again")
         }
-        
+
         const id = await this.idGenerator.generateId()
 
         const tokenInfo = await this.authenticator.getTokenData(image.token)
@@ -33,12 +33,38 @@ export class ImageBusiness {
         // console.log("URL", image.URL)
         // console.log("tokenInfo", tokenInfo.id)
 
-        await this.imageDatabase.insertImage({id, subtitle: image.subtitle,URL: image.URL, fk_user: tokenInfo.id})
-        
+        await this.imageDatabase.insertImage({ id, subtitle: image.subtitle, URL: image.URL, fk_user: tokenInfo.id })
+
 
 
     }
-    
-    
+    async getMusicById(image: ImageTokenId) {
+        if (!image.id) {
+            throw new InvalidInputError("Missed Input")
+        }
+        if (!image.token) {
+            throw new InvalidInputError("Please Login Again")
+        }
+
+        const tokenInfo = await this.authenticator.getTokenData(image.token)
+
+        
+        if (tokenInfo.id === image.id) {
+            const result = await this.imageDatabase.getUserById(tokenInfo.id)
+            console.log(result)
+            return result
+        }
+        else {
+            const result = await this.imageDatabase.getMusicById(tokenInfo.id)
+            console.log(result)
+            return result            
+        }
+
+        
+    }
+
+
+
+
 
 }

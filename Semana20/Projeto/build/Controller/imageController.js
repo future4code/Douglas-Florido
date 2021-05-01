@@ -35,6 +35,23 @@ class ImageController {
             }
         });
     }
+    getMusicById(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const input = {
+                    token: req.params.token,
+                    id: req.params.id
+                };
+                const imageBusiness = new imageBusiness_1.ImageBusiness(new imageDatabase_1.ImageDatabase, new IdGenerator_1.IdGenerator, new HashManager_1.HashManager, new TokenManager_1.TokenManager);
+                const result = yield imageBusiness.getMusicById(input);
+                res.status(200).send(result);
+                yield BaseDatabase_1.BaseDatabase.destroyConnection();
+            }
+            catch (error) {
+                res.status(400).send({ error: error.message });
+            }
+        });
+    }
 }
 exports.ImageController = ImageController;
 //# sourceMappingURL=imageController.js.map

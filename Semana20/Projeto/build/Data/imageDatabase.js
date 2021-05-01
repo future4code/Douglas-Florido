@@ -27,6 +27,34 @@ class ImageDatabase extends BaseDatabase_1.BaseDatabase {
             }
         });
     }
+    getMusicById(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const result = yield this.getConnection().raw(`
+            SELECT * FROM ${TableNames_1.ImageTable}
+            WHERE ( id = "${id}")
+            `);
+                return result;
+            }
+            catch (error) {
+                throw new Error(error.sqlMessage || error.message);
+            }
+        });
+    }
+    getUserById(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const result = yield this.getConnection().raw(`
+            SELECT * FROM ${TableNames_1.UserTable}
+            WHERE ( id = "${id}")
+            `);
+                return result;
+            }
+            catch (error) {
+                throw new Error(error.sqlMessage || error.message);
+            }
+        });
+    }
 }
 exports.ImageDatabase = ImageDatabase;
 //# sourceMappingURL=imageDatabase.js.map

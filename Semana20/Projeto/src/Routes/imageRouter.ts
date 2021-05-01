@@ -6,3 +6,4 @@ export const imageRouter = express.Router();
 const imageController = new ImageController();
 
 imageRouter.post("/insert/:token", imageController.insert)
+imageRouter.get("/:token/:id", imageController.getMusicById)
