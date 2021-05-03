@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "f86d6641-efd1-4443-b367-637e93fb5fbc",
+		"name": "ProjetoLAMA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "SignUp",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0b08cd48-9a99-4fff-b9a4-fb5446c429f6",
+								"exec": [
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", data.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Teste2\",\n    \"email\": \"teste2@email.com\",\n    \"password\": \"12344321\",\n    \"role\": \"ADMIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8ea5f78d-e1b5-431f-acaa-5d1530b8c755",
+								"exec": [
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", data.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"teste2@email.com\",\n    \"password\": \"12344321\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Band",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg4Y2Q4MjMwLTU1MWEtNGQ2Yi1hNTUyLWVhMDM1NGM1ZjljYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYwMjU2Mjg1MSwiZXhwIjoxNjAyNTYzNDUxfQ.GghH2oI7j6PIcyJbxr1VGrXumMUV4a5poRjhpoN-4K8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Labanda\",\n    \"mainGenre\": \"BACK N' ROLL\",\n    \"responsible\": \"Amandinha\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/band/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"band",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Show",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg4Y2Q4MjMwLTU1MWEtNGQ2Yi1hNTUyLWVhMDM1NGM1ZjljYyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYwMjYxNzU3MCwiZXhwIjoxNjAyNjE4MTcwfQ.rX-YRZIoEaEp9xUIBsd-kPI1JMB5FXZb8qh8J7rsoEM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bandId\": \"d42504c0-29a7-4c22-b394-c69d04df696e\",\n    \"weekDay\": \"FRIDAY\",\n    \"startTime\": 17,\n    \"endTime\": 19\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/show/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"show",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by WeekDay",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
