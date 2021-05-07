@@ -39,12 +39,10 @@ class ImageBusiness {
             const tokenInfo = yield this.authenticator.getTokenData(image.token);
             if (image.id === "" || !image.id) {
                 const result = yield this.imageDatabase.getImagesOfUser(tokenInfo.id);
-                console.log("IF ===  ", result);
                 return result;
             }
             else {
                 const result = yield this.imageDatabase.getImageById(image.id);
-                console.log("ELSE:", result);
                 return result;
             }
         });
