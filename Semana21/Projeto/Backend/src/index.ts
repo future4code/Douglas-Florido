@@ -16,7 +16,6 @@ app.listen(3003, () => {
     console.log("Server running on port 3003")
 })
 
-
 app.use("/user", userRouter);
 app.use("/image", imageRouter);
 app.use("/collection", collectionRouter);

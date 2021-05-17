@@ -42,6 +42,19 @@ export class ImageDatabase extends BaseDatabase {
             throw new Error(error.sqlMessage || error.message)
         }
     }
+
+    public async getAllImages(): Promise<boolean | string>  {
+        try {
+            const result = await this.getConnection().raw(`
+            Select * FROM ${this.tableNames.images};
+            `)
+            console.log( result[0])
+            return result[0]
+        } catch (error) {
+            throw new Error(error.sqlMessage || error.message)
+        }
+
+    }
     
 
 

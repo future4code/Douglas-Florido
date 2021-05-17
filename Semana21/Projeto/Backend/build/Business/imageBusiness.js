@@ -47,6 +47,15 @@ class ImageBusiness {
             }
         });
     }
+    getAllImages(token) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (!token) {
+                throw new InvalidInputError_1.InvalidInputError("Please Login Again");
+            }
+            const result = yield this.imageDatabase.getAllImages();
+            return result;
+        });
+    }
 }
 exports.ImageBusiness = ImageBusiness;
 //# sourceMappingURL=imageBusiness.js.map

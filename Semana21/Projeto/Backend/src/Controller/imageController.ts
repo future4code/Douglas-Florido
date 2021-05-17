@@ -1,6 +1,6 @@
 import { BaseDatabase } from "../Data/BaseDatabase";
 import { Request, Response } from 'express'
-import { ImageInput, ImageTokenId } from "../Entities/Image";
+import { basicToken, ImageInput, ImageTokenId } from "../Entities/Image";
 import { ImageBusiness } from "../Business/imageBusiness";
 import { ImageDatabase } from "../Data/imageDatabase";
 import { IdGenerator } from "../Services/IdGenerator";
@@ -39,7 +39,7 @@ export class ImageController {
 
     }
 
-    async getImageById(req: Request, res: Response) {
+    async getImageByUserOrImageId(req: Request, res: Response) {
         try {
 
             const input: ImageTokenId = {
@@ -57,12 +57,36 @@ export class ImageController {
             const result = await imageBusiness.getImageById(input)
 
             res.status(200).send(result)
-            
+
             await BaseDatabase.destroyConnection();
         } catch (error) {
             res.status(400).send({ error: error.message });
         }
-        
+
+    }
+
+    async getAllImages(req: Request, res: Response) {
+
+        try {            
+            
+            const token = req.params.token    
+
+            const imageBusiness = new ImageBusiness(
+                new ImageDatabase,
+                new IdGenerator,
+                new HashManager,
+                new TokenManager
+            );
+
+            const result = await imageBusiness.getAllImages(token)
+            
+            res.status(200).send(result)
+
+        } catch (error) {
+            res.status(400).send({ error: error.message });
+        }
+
+
     }
 
 

@@ -6,5 +6,8 @@ export const imageRouter = express.Router();
 const imageController = new ImageController();
 
 imageRouter.post("/insert/:token", imageController.insert)
-imageRouter.get("/:token/:id", imageController.getImageById)
-imageRouter.get("/:token/", imageController.getImageById)
+imageRouter.get("/all/:token", imageController.getAllImages)
+imageRouter.get("/:token/:id", imageController.getImageByUserOrImageId)
+imageRouter.get("/:token/", imageController.getImageByUserOrImageId)
+
+

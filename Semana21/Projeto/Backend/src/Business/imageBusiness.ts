@@ -1,6 +1,6 @@
 import { ImageDatabase } from "../Data/imageDatabase";
 import { UserDatabase } from "../Data/userDatabase";
-import { ImageToBusiness, ImageTokenId } from "../Entities/Image";
+import { basicToken, ImageToBusiness, ImageTokenId } from "../Entities/Image";
 import { AuthenticationData, UserComplete, UserInput } from "../Entities/User";
 import { InvalidInputError } from "../Error/InvalidInputError";
 import { HashManager } from "../Services/HashManager";
@@ -35,29 +35,39 @@ export class ImageBusiness {
 
 
     }
-    async getImageById(image: ImageTokenId) {        
+    async getImageById(image: ImageTokenId) {
         if (!image.token) {
             throw new InvalidInputError("Please Login Again")
         }
 
         const tokenInfo = await this.authenticator.getTokenData(image.token)
 
-        
+
         if (image.id === "" || !image.id) {
             const result = await this.imageDatabase.getImagesOfUser(tokenInfo.id)
-            
+
             return result
         }
         else {
             const result = await this.imageDatabase.getImageById(image.id)
-            
-            return result            
+
+            return result
         }
 
-        
     }
 
-    
+    async getAllImages(token: string) {
+        if (!token) {
+            throw new InvalidInputError("Please Login Again")
+        }
+
+        const result = await this.imageDatabase.getAllImages()
+
+        return result
+
+    }
+
+
 
 
 

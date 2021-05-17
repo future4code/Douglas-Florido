@@ -49,3 +49,7 @@ Content-Type: application/json
     "id_collection": "36039db1-2674-476f-8525-2219f5cb5fe4",
     "id_image": "3b40fd34-c820-4d77-b6aa-10d48b4e62c9"
 }
+
+### Get All Images
+GET http://localhost:3003/image/all/{{Login.response.body.token}}
+Content-Type: application/json
